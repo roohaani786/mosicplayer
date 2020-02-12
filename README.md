@@ -1,6 +1,6 @@
-# flutter_app
+# mosic_player
 
-A new Flutter application.
+A music player which follows your different moods altogether.
 
 ## Getting Started
 
