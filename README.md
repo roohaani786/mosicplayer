@@ -1,6 +1,7 @@
 # mosic_player
 
 A music player which follows your different moods altogether.
+<img src="images/pic3.png">
 
 ## Getting Started
 
