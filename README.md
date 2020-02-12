@@ -2,7 +2,7 @@
 
 A music player which follows your different moods altogether.
 <br/>
-<img src="images/pic3.png" height="100" width="100">
+<img src="images/pic3.png" height="150" width="150">
 
 ## Getting Started
 
