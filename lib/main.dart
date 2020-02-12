@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter login UI',
-      theme: new ThemeData(scaffoldBackgroundColor: const Color(0xEEFEFEF)),
+      theme: new ThemeData(scaffoldBackgroundColor: Colors.black),
       home: MyHomePage(title: 'Flutter Login',),
     );
   }

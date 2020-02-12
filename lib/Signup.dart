@@ -49,16 +49,17 @@ class Signup extends StatelessWidget{
 
 
 
-    final loginButon = Material(
+    final signupButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: Color(0xff01A0C7),
+      color: Colors.green,
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {},
-        child: Text("Signup",style: TextStyle(color: Colors.white70),
+        child: Text("Signup",style: TextStyle(color: Colors.white70,fontSize: 20.0),
             textAlign: TextAlign.center,
+
 
 
             ),
@@ -98,7 +99,7 @@ class Signup extends StatelessWidget{
                   height: 15.0,
                 ),
 
-                loginButon,
+                signupButon,
                 SizedBox(
                   height: 10.0,
                 ),
