@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'Dashboard.dart';
+//import 'package:flutter_app/Dashboard.dart';
+
 class Signup extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -56,7 +59,12 @@ class Signup extends StatelessWidget{
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Dashboard()),
+          );
+        },
         child: Text("Signup",style: TextStyle(color: Colors.white70,fontSize: 20.0),
             textAlign: TextAlign.center,
 

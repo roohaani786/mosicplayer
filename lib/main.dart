@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Signup.dart';
 
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -78,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
 
-    final SignupButon = Material(
+    final signupButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
       color: Colors.green,
@@ -97,6 +98,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.white, fontWeight: FontWeight.bold)),
       ),
     );
+
+
+
 
 
     return Scaffold(
@@ -137,10 +141,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 18.0,width: 22.0,
                 ),
 
-                SignupButon,
+                signupButon,
                 SizedBox(
                   height: 8.0,
                 ),
+
+                SizedBox(
+                  height: 18.0,width: 22.0,
+                ),
+              new Image(image: AssetImage('graphics/background.png')),
+
               ],
             ),
           ),
