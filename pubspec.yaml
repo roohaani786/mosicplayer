@@ -53,6 +53,12 @@ flutter:
     - images/Punjabi.png
     - images/bollywood.png
     - images/hollywood.png
+    - images/bremix.png
+    - images/rehollywood.png
+    - images/repunjabi.png
+    - images/marsh.png
+    - images/shawn.png
+    - images/camila.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
