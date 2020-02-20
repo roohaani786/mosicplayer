@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'Discover.dart';
+import 'package:get/get.dart';
 
 class Dashboard extends StatelessWidget{
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -13,16 +17,18 @@ class Dashboard extends StatelessWidget{
       body: Container(
         padding: EdgeInsets.only(top: 60.0,left: 13.0),
 
-        child: Column(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.stretch,
 
           children: <Widget>[
             Padding(padding: EdgeInsets.only(top: 10.0)),
 
             Row(
 
+
               children: <Widget>[
                 Align(
-                  alignment: Alignment.topLeft,
+                  
+//                  onTap: Get.to(Dashboard()),
                   child: FittedBox(
 //                      width: 120.0,
 //                      height: 120.0,
@@ -43,6 +49,7 @@ class Dashboard extends StatelessWidget{
 
                     ),
 
+
                   ),
                 ),
 
@@ -57,122 +64,132 @@ class Dashboard extends StatelessWidget{
             Row(
 
               children: <Widget>[
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: FittedBox(
-//                      width: 120.0,
-//                      height: 120.0,
 
-                      child: Container(
-                        width: 120.0,
-                        height: 120.0,
-                        alignment: Alignment.bottomCenter,
-                        decoration: new BoxDecoration(
-                          image: DecorationImage(
-                            image: new AssetImage(
-                                'images/pic4.png'),
-                            fit: BoxFit.fill,
-                          ),
-                          shape: BoxShape.rectangle,
-                        ),
+                MaterialButton(
 
-                        child: Text("Discover",style: TextStyle(
-                          color: Colors.white,fontWeight: FontWeight.w700,fontSize: 16.0
-                        ),
-                        ),
+                  child: Container(
+
+                    width: 80.0,
+                    height: 80.0,
+                    alignment: Alignment.bottomCenter,
 
 
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
 
-                      ),
+                          image: AssetImage('images/pic4.png',),
+                          alignment: Alignment.topLeft,
+
+                          fit: BoxFit.fill),
+                    ),
+                    child: new Text(
+                      'Discover',style: TextStyle(
+                      color: Colors.white,
+                    ),
+                    ),
 
                   ),
+
+                  // ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Discover()),
+                    );
+                  }
                 ),
 
-                Padding(padding: EdgeInsets.only(right: 5.0)),
+                Padding(padding: EdgeInsets.only(right: 2.0)),
 
                 //Column 2
 
                 Row(
 
                   children: <Widget>[
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: FittedBox(
-//                      width: 120.0,
-//                      height: 120.0,
+
+                    MaterialButton(
 
                         child: Container(
-                          width: 120.0,
-                          height: 120.0,
 
+                          width: 80.0,
+                          height: 80.0,
                           alignment: Alignment.bottomCenter,
-                          decoration: new BoxDecoration(
+
+
+                          decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: new AssetImage(
-                                  'images/Recently.png'),
-                              fit: BoxFit.fill,
-                            ),
-                            shape: BoxShape.rectangle,
-                          ),
 
-                          child: Text("Recently Played",style: TextStyle(
-                              color: Colors.white,fontWeight: FontWeight.w700,fontSize: 16.0
+                                image: AssetImage('images/Recently.png',),
+                                alignment: Alignment.topLeft,
+
+                                fit: BoxFit.fill),
+                          ),
+                          child: new Text(
+                            'On Loop',style: TextStyle(
+                            color: Colors.white
                           ),
                           ),
-
-
 
                         ),
 
-                      ),
+                        // ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Discover()),
+                          );
+                        }
                     ),
 
-                    Padding(padding: EdgeInsets.only(right: 5.0,)),
+                    Padding(padding: EdgeInsets.only(right: 2.0,)),
 
                     //Column 3
 
-                    Row(
-                      children: <Widget>[
+    Row(
 
-                        Align(
-                          alignment: Alignment.bottomCenter,
+    children: <Widget>[
 
-                          child: FittedBox(
-//                      width: 120.0,
-//                      height: 120.0,
+    MaterialButton(
 
-                            child: Container(
-                              width: 120.0,
-                              height: 120.0,
-                              alignment: Alignment.bottomCenter,
-                              decoration: new BoxDecoration(
-                                image: DecorationImage(
-                                  image: new AssetImage(
-                                      'images/liked2.png'),
-                                  fit: BoxFit.fill,
-                                ),
-                                shape: BoxShape.rectangle,
-                              ),
+    child: Container(
 
-                              child: Text("Liked Songs",style: TextStyle(
-                                  color: Colors.white,fontWeight: FontWeight.w700,fontSize: 16.0
-                              ),
-                              ),
+    width: 80.0,
+    height: 80.0,
+    alignment: Alignment.bottomCenter,
 
 
+    decoration: BoxDecoration(
+    image: DecorationImage(
 
-                            ),
+    image: AssetImage('images/liked2.png',),
+    alignment: Alignment.topLeft,
 
-                          ),
-                        )
-                      ],
+    fit: BoxFit.fill),
+    ),
+    child: new Text(
+    'Liked Songs',style: TextStyle(
+      color: Colors.white
+    ),
+    ),
+
+    ),
+
+    // ),
+    onPressed: () {
+    Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => Discover()),
+    );
+    }
+    ),
+    ],
                     ),
                   ],
                 ),
 
               ],
             ),
-            Padding(padding: EdgeInsets.only(top: 5.0)),
+            Padding(padding: EdgeInsets.only(top: 8.0)),
 
             //Row 2
             //Column 1
@@ -180,123 +197,130 @@ class Dashboard extends StatelessWidget{
             Row(
 
               children: <Widget>[
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: FittedBox(
-//                      width: 120.0,
-//                      height: 120.0,
+
+                MaterialButton(
 
                     child: Container(
-                      width: 120.0,
-                      height: 120.0,
 
+                      width: 80.0,
+                      height: 80.0,
                       alignment: Alignment.bottomCenter,
-                      decoration: new BoxDecoration(
+
+
+                      decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: new AssetImage(
-                              'images/hollywood.png'),
-                          fit: BoxFit.fill,
-                        ),
-                        shape: BoxShape.rectangle,
-                      ),
 
-                      child: Text("Hollywood",style: TextStyle(
-                          color: Colors.white,fontWeight: FontWeight.w700,fontSize: 16.0
+                            image: AssetImage('images/hollywood.png',),
+                            alignment: Alignment.topLeft,
+
+                            fit: BoxFit.fill),
+                      ),
+                      child: new Text(
+                        'Hollywood',style: TextStyle(
+                        color: Colors.white,
                       ),
                       ),
-
-
 
                     ),
 
-                  ),
+                    // ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Discover()),
+                      );
+                    }
                 ),
-                Padding(padding: EdgeInsets.only(left: 5.0)),
 
-                //column2
+                Padding(padding: EdgeInsets.only(right: 2.0)),
+
+                //Column 2
 
                 Row(
 
                   children: <Widget>[
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: FittedBox(
-//                      width: 120.0,
-//                      height: 120.0,
+
+                    MaterialButton(
 
                         child: Container(
-                          width: 120.0,
-                          height: 120.0,
 
+                          width: 80.0,
+                          height: 80.0,
                           alignment: Alignment.bottomCenter,
-                          decoration: new BoxDecoration(
+
+
+                          decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: new AssetImage(
-                                  'images/bollywood.png'),
-                              fit: BoxFit.fill,
-                            ),
-                            shape: BoxShape.rectangle,
-                          ),
 
-                          child: Text("Bollywood",style: TextStyle(
-                              color: Colors.white,fontWeight: FontWeight.w700,fontSize: 16.0
+                                image: AssetImage('images/bollywood.png',),
+                                alignment: Alignment.topLeft,
+
+                                fit: BoxFit.fill),
+                          ),
+                          child: new Text(
+                            'Bollywood',style: TextStyle(
+                              color: Colors.white
                           ),
                           ),
-
-
 
                         ),
 
-                      ),
-                    )
-                  ],
-                ),
-
-                Padding(padding: EdgeInsets.only(left: 5.0)),
-
-                //Column3
-
-                Row(
-
-                  children: <Widget>[
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: FittedBox(
-//                      width: 120.0,
-//                      height: 120.0,
-
-                        child: Container(
-                          width: 120.0,
-                          height: 120.0,
-
-                          alignment: Alignment.bottomCenter,
-                          decoration: new BoxDecoration(
-                            image: DecorationImage(
-                              image: new AssetImage(
-                                  'images/Punjabi.png'),
-                              fit: BoxFit.fill,
-                            ),
-                            shape: BoxShape.rectangle,
-                          ),
-
-                          child: Text("Punjabi",style: TextStyle(
-                              color: Colors.white,fontWeight: FontWeight.w700,fontSize: 16.0
-                          ),
-                          ),
-
-
-
-                        ),
-
-                      ),
+                        // ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Discover()),
+                          );
+                        }
                     ),
 
+                    Padding(padding: EdgeInsets.only(right: 2.0,)),
+
+                    //Column 3
+
+                    Row(
+
+                      children: <Widget>[
+
+                        MaterialButton(
+
+                            child: Container(
+
+                              width: 80.0,
+                              height: 80.0,
+                              alignment: Alignment.bottomCenter,
+
+
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+
+                                    image: AssetImage('images/Punjabi.png',),
+                                    alignment: Alignment.topLeft,
+
+                                    fit: BoxFit.fill),
+                              ),
+                              child: new Text(
+                                'Punjabi',style: TextStyle(
+                                  color: Colors.white
+                              ),
+                              ),
+
+                            ),
+
+                            // ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Discover()),
+                              );
+                            }
+                        ),
+                      ],
+                    ),
                   ],
                 ),
 
               ],
-
-
             ),
 
 //            Padding(padding: EdgeInsets.only(top: 30.0)),
