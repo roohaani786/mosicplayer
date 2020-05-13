@@ -1,6 +1,6 @@
 # mosic_player
 
-A music player which follows your different moods altogether.
+A music player which follows your different moods altogether. This project is in development phase.
 <br/>
 <br/>
 <img src="images/pic3.png" height="300" width="300">
